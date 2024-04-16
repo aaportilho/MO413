@@ -37,12 +37,16 @@ Diabetes gestacional, câncer e pré-eclâmpsia podem gerar modulações a níve
 > PubMed | [PubMed](https://pubmed.ncbi.nlm.nih.gov/) | Repositório de literatura biomédica.
 
 ## Modelo Lógico
-
-![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
+![Modelo Lógico de Grafos](assets/images/modelo-logico-grafos.png)
 
 ## Metodologia
-> Esta seção evoluirá ao longo do projeto. Nesta primeira entrega, informe técnicas de Ciência de Redes que pretende explorar,
-> tais como: detecção de comunidades, análise de centralidade, predição de links, ou a combinação de uma ou mais técnicas. Descreva o que perguntas pretende endereçar cm a técnica escolhida.
+O projeto pretende explorar o problema seguindo a seguinte metodologia:
+1. Seleção dos artigos relevantes com foco em pré-clínico e proteômicas (critério de inclusão);
+2. Determinar lista de proteínas alteradas a serem estudadas;
+3. Filtrar em relação ao grau de expressão, separando em aumento ou diminuição da expressão;
+4. Construir e analisar as redes de interação proteína-proteína para cada doença;
+* Utilizar técnicas exploratórias de ciência de redes, tais como: análise de centralidade para identificar proteínas mais relevantes que são afetadas pelas doenças; identificação de comunidades de proteínas que podem se repetir entre as diferentes doenças.
+6. Analisar as vias biológicas afetadas.
 
 ## Ferramentas
 * PubMed, Scopus --> Busca de artigos
