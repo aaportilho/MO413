@@ -17,6 +17,7 @@ Os artigos que serão tomados como base para a fundamentação teórica do probl
 * Pre-eclampsia[^3]
 * Proteomic Approaches in the Study of Placenta of Pregnancy Complicated by Gestational Diabetes Mellitus[^4]
 * Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta[^5]
+* Management of pregnancy in women with cancer[^6]
 
 Com foco em investigar como se relacionam os padrões proteômicos e funcionais de placenta de indivíduos com diabetes gestacional, câncer e pré-eclâmpsia.
 
@@ -37,11 +38,7 @@ Diabetes gestacional, câncer e pré-eclâmpsia podem gerar modulações a níve
 
 ## Modelo Lógico
 
-> Modelo lógico da base de grafos que será construída. Para o modelo de grafos de propriedades, utilize este
-> [modelo de base](https://docs.google.com/presentation/d/10RN7bDKUka_Ro2_41WyEE76Wxm4AioiJOrsh6BRY3Kk/edit?usp=sharing) para construir o seu.
-> Coloque a imagem do PNG do seu modelo lógico como ilustrado abaixo (a imagem estará na pasta `image`):
->
-> ![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
+![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
 
 ## Metodologia
 > Esta seção evoluirá ao longo do projeto. Nesta primeira entrega, informe técnicas de Ciência de Redes que pretende explorar,
@@ -61,4 +58,4 @@ Placental structural abnormalities in gestational diabetes and when they develop
 [^3]: Dimitriadis, E., Rolnik, D.L., Zhou, W. et al. Pre-eclampsia. Nat Rev Dis Primers 9, 8 (2023). https://doi.org/10.1038/s41572-023-00417-6
 [^4]:Lapolla A, Traldi P. Proteomic Approaches in the Study of Placenta of Pregnancy Complicated by Gestational Diabetes Mellitus. Biomedicines. 2022; 10(9):2272. https://doi.org/10.3390/biomedicines10092272
 [^5]:Oliveira MdMS, Salgado CdM, Viana LR, Gomes-Marcondes MCC. Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta. Cancers. 2021; 13(7):1667. https://doi.org/10.3390/cancers13071667
-[^6]: Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancerInternational Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
+[^6]: Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancer International Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
