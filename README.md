@@ -17,7 +17,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 # Descrição Resumida do Projeto
 
 ## Contexto/Motivação
-O projeto visa analisar e comparar alterações proteômicas e funcionais da placenta associadas a diabetes, pré-eclâmpsia e câncer. Essas três doenças são frequentes durante a gestação e acarretam patologias na placenta e consequentemente ao feto. Portanto o objetivo é investigar como se relacionam os padrões proteômicos e funcionais de placenta de indivíduos com diabetes gestacional, câncer e pré-eclâmpsia.
+O projeto visa analisar comparativamente as alterações proteômicas e funcionais da placenta associadas à diabetes, pré-eclâmpsia e câncer. Essas três doenças são frequentes durante a gestação e acarretam patologias na placenta e, consequentemente, ao feto. Portanto, temos como objetivo investigar o relacionamento dos padrões proteômicos e funcionais de placenta de indivíduos com diabetes gestacional, câncer e pré-eclâmpsia.
 
 ## Análise
-Para desenvolver o projeto serão utilizadas algumas ferramentas, como PubMed e Scorpus para procurar artigos relacionados com o tema; Citoscape e Sting para a construção das redes de interação proteína-proteína; Reactome para analisar as vias alteradas. Dessa forma,  sendo possível constatar que diabetes gestacional, câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
+Para o desenvolvimento deste projeto serão utilizadas diferentes ferramentas, tais como PubMed e Scorpus para procurar artigos relacionados com o tema; Cytoscape e Sting para a construção das redes de interação proteína-proteína; Reactome para analisar as vias alteradas. Por meio dessa análise, será possível verificar que diabetes gestacional, câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
