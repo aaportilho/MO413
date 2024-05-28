@@ -45,10 +45,16 @@ O projeto pretende explorar o problema seguindo a seguinte metodologia:
 > Scopus | [Scopus](https://www.scopus.com/home.uri) | Repositório para busca de artigos relacionados ao projeto. Tais artigos podem disponibilizar bases de dados usadas posteriormente no projeto.
 > PubMed | [PubMed](https://pubmed.ncbi.nlm.nih.gov/) | Repositório de literatura biomédica.
 
+Os dados de proteínas alteradas que foram extraídos de artigos do Scopus/PubMed foram tratados para serem compatíveis com o STRING e gerar as redes de interação. Assim, foi necessário mapear os identificadores de proteínas utilizados pelos artigos (UNIPROT) para os genes referentes, uma vez que o STRING utiliza o nome do gene como identificador dos nós das redes.
+Além disso, algumas proteínas possuíam vários sinônimos separados por ponto e vírgula, dos quais selecionamos um que fosse reconhecido pelo UNIPROT e STRING. Por fim, foram removidas proteínas não identificadas em nenhuma das bases.
+
 ## Modelo Lógico
 ![Modelo Lógico de Grafos](assets/images/modelo-logico-grafos.png)
 
 ## Integração entre Bases
+A princípio, as bases para cada uma das duas doenças estudadas foram armazenadas em abas de um arquivo excel. Esse arquivo possuia informações como: o identificador das proteínas alteradas, o gene relacionado, o fold change e o tipo de regulação (up/down).
+Após inserir as proteínas de cada doença na base do STRING e extrair as redes de interação (PPI), foi necessário associar as informações de regulação das proteínas (fold change e tipo de regulação) aos atributos dos nós dessas redes por meio do NEO4J.
+Por último, para integrar as duas redes e conseguir criar atributos vindo tanto do câncer quanto da pré-eclâmpsia, utilizamos o Python. Dessa forma, conseguimos gerar uma rede final que representava as interação das proteínas alteradas em ambas doenças e os atributos advindos da regulação em cada doença específica.
 
 ## Análise Preliminar
 Até o momento, o foco do projeto foi realizar o tratamento dos dados e a construção das redes de proteínas para cada doença, assim como a integração de ambas.
@@ -74,7 +80,7 @@ No Cytoscape é possível fazer o enriquecimento dos grafos separadamente e asso
 Após a identificação das proteínas que exercem maior influência na placenta no câncer e/ou na pré-eclâmpsia, será utilizado o Reactome. Este é um banco de dados biológicos que permite visualizar as vias biológicas alteradas a partir de genes ou proteínas.
 
 TL;DR:
-* PubMed, Scopus --> Busca de artigos
+* PubMed, Scopus --> Revisão bibliográfica e busca por proteínas alteradas
 * STRING (string-db) --> Database para redes do tipo Protein-protein Interaction (PPI)
 * Reactome --> Database de vias biológicas
 * Python, NEO4J, Cytoscape --> Construção, integração e análise das redes PPI
