@@ -51,19 +51,33 @@ O projeto pretende explorar o problema seguindo a seguinte metodologia:
 ## Integração entre Bases
 
 ## Análise Preliminar
+Até o momento, o foco do projeto foi realizar o tratamento dos dados e a construção das redes de proteínas para cada doença, assim como a integração de ambas.
+Dadas as propriedades escolhidas no STRING para definir a interação entre as proteínas, notamos que na rede de câncer cerca de 111 proteínas estão interligadas. Já na pré-eclâmpsia, foi visto que 103 proteínas possuem interação.
+Após integrar as duas redes, foi observado que apenas 12 proteínas estão em comum, sendo 5 delas com a mesma regulação (up ou down). Dessas proteínas, duas estão up regulated: Alfa-actinina-1 e Hemopexina. E três estão down regulated: Subunidade beta do complexo AP-2, Inibidor de apoptose 5, Cadeia de tubulina beta-3.
 
 ## Evolução do Projeto
 Inicialmente, o projeto tinha como proposta analisar os padrões proteômicos na placenta de ratas, relacionados a três patologias: Diabetes, Câncer e Pré-eclâmpsia. Contudo, durante a revisão da literatura, não foram encontrados resultados relevantes para a diabetes. Diante disso, decidimos prosseguir com o estudo focado nas outras duas doenças.
+
 Além disso, após o feedback da primeira entrega, foram realizadas modificações no modelo lógico. Durante o desenvolvimento, aumentamos a compreensão do projeto e modificamos o modelo lógico para de fato refletir as redes de interação entre proteínas, os atributos que iriam caracterizar cada nó, e a interação dessas proteínas com vias biológicas associadas.
-Durante esse primeiro mês de elaboração do projeto foi realizado o levantamento bibliográfico, nas bases de dados PubMed e Scorpus. Os dados adquiridos foram tabulados no Excel. Com auxílio do Python, realizou-se a curadoria dos dados e sua inserção no STRING para a elaboração de redes de interação proteína-proteína. A rede gerada utilizava os nomes de proteína (uniprot), porém os nós recebiam a denominação do gene.
-Os resultados dessa rede de interação foram inseridos no Cytoscape, após o processamento dos dados no Neo4j e Python. No Cytoscape os títulos dos nós foram alterados para os nomes de proteína. Além disso, foram analisadas as redes associadas para facilitar a verificação de proteínas em comum das duas redes.
-Os próximos passos serão analisar os atributos dos nós (regulação up ou down, fold change) das redes e analisar a topologia de rede (centralidade e comunidade) no Cytoscape. Além disso, será realizado o enriquecimento da rede buscando por vias biológicas relacionadas, utilizando o Reactome. Com esses resultados será possível relacioná-los e por fim realizar a interpretação biológica dos achados.
+
+Durante esse primeiro mês de elaboração do projeto foi realizado o levantamento bibliográfico nas bases do PubMed e do Scorpus. Os dados adquiridos foram tabulados no Excel. Com auxílio do Python, realizou-se a curadoria dos dados e sua inserção no STRING para a elaboração de redes de interação proteína-proteína. A rede gerada utilizava os nomes de proteína (uniprot), porém os nós recebiam a denominação do gene.
+
+Os resultados dessa rede de interação foram inseridos no Cytoscape, após o processamento dos dados em Python e integração das redes e dos atributos dos nós no Neo4j. No Cytoscape os títulos dos nós foram alterados para os nomes de proteína. Além disso, foram analisadas as redes associadas para facilitar a verificação de proteínas em comum das duas redes.
+
+Os próximos passos serão analisar os atributos dos nós (regulação up ou down, fold change) das redes e analisar a topologia de rede (centralidade e comunidade) no Cytoscape. Além disso, será realizado o enriquecimento da rede buscando por vias biológicas relacionadas, utilizando o Reactome. Com esses resultados será possível identificar os padrões mais relevantes e, por fim, realizar a interpretação biológica dos achados.
 
 ## Ferramentas
+Para o levantamento bibliográfico e definição das proteínas reguladas nas doenças, foram utilizadas as bases de dados PubMed e Scorpus. 
+Os dados adquiridos foram tabulados no Excel. Com auxílio do Python, realizou-se a curadoria dos dados e sua inserção no STRING (string-db). 
+O STRING é um banco de dados biológicos que auxilia na elaboração de redes de interação proteína-proteína. Essas redes de interações entre proteínas foram processadas utilizando Python e Neo4j para integração e criação dos atributos dos nós (Neo4J é um sistema de gerenciamento de banco de dados gráfico).Posteriormente, as redes foram inseridas no Cytoscape para análises específicas.
+No Cytoscape é possível fazer o enriquecimento dos grafos separadamente e associados.
+Após a identificação das proteínas que exercem maior influência na placenta no câncer e/ou na pré-eclâmpsia, será utilizado o Reactome. Este é um banco de dados biológicos que permite visualizar as vias biológicas alteradas a partir de genes ou proteínas.
+
+TL;DR:
 * PubMed, Scopus --> Busca de artigos
 * STRING (string-db) --> Database para redes do tipo Protein-protein Interaction (PPI)
 * Reactome --> Database de vias biológicas
-* NEO4J, Cytoscape --> Construção e análise das redes PPI
+* Python, NEO4J, Cytoscape --> Construção, integração e análise das redes PPI
 
 ## Referências Bibliográficas
 [^1]: Erin Ehlers, Omonseigho O. Talton, Danny J. Schust, Laura C. Schulz,
