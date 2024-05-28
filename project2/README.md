@@ -3,12 +3,13 @@
 
 ## Descrição Resumida do Projeto
 ### Contexto/Motivação
-O projeto visa analisar comparativamente as alterações proteômicas e funcionais da placenta associadas à diabetes, pré-eclâmpsia e câncer. Essas três doenças são frequentes durante a gestação e acarretam patologias na placenta e, consequentemente, ao feto. Portanto, temos como objetivo investigar o relacionamento dos padrões proteômicos e funcionais de placenta de indivíduos com diabetes gestacional, câncer e pré-eclâmpsia.
+O projeto visa analisar comparativamente as alterações proteômicas e funcionais da placenta associadas à pré-eclâmpsia e ao câncer. Essas duas doenças são frequentes durante a gestação e acarretam patologias na placenta e, consequentemente, ao feto. Portanto, investigar como as proteínas na placenta de gestantes com cânces ou pré-eclâmpsia foram reguladas, a interação entre essas proteínas, e as vias biológicas influenciadas, pode revelar padrões proteômicos e funcionais que auxiliem no entendimento e tratamento de ambas doenças.
 
 ### Análise
-Para o desenvolvimento deste projeto serão utilizadas diferentes ferramentas, tais como PubMed e Scorpus para procurar artigos relacionados com o tema; Cytoscape e Sting para a construção das redes de interação proteína-proteína; Reactome para analisar as vias alteradas. Por meio dessa análise, será possível verificar que diabetes gestacional, câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
+Para o desenvolvimento deste projeto serão utilizadas diferentes ferramentas, tais como PubMed e Scorpus para procurar artigos relacionados com o tema; Cytoscape e Sting para a construção das redes de interação proteína-proteína; Reactome para analisar as vias biológicas alteradas. Por meio dessa análise, será possível verificar que câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
 
 ## Slides
+[Apresentação Projeto P2](assets/slides/apresentacao_projeto_p2.pdf)
 
 ## Fundamentação Teórica
 Os artigos que serão tomados como base para a fundamentação teórica do problema em saúde/biologia:
@@ -19,22 +20,22 @@ Os artigos que serão tomados como base para a fundamentação teórica do probl
 * Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta[^5]
 * Management of pregnancy in women with cancer[^6]
 
-Com foco em investigar como se relacionam os padrões proteômicos e funcionais de placenta de indivíduos com diabetes gestacional, câncer e pré-eclâmpsia.
+O foco da pesquisa nesses artigos é investigar as alterações em padrões proteômicos e funcionais de placenta de indivíduos com câncer e pré-eclâmpsia.
 
 ## Perguntas de Pesquisa
 ### Pergunta
-Como se relacionam os padrões proteômicos e funcionais de placenta de indivíduos com diabetes gestacional, câncer e pré-eclâmpsia?  
+Como se relacionam os padrões proteômicos e funcionais de placenta de indivíduos com câncer e pré-eclâmpsia?  
 ### Hipótese
-Diabetes gestacional, câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
+Câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
 
 ## Metodologia
 O projeto pretende explorar o problema seguindo a seguinte metodologia:
-1. Seleção dos artigos relevantes com foco em pré-clínico e proteômicas (critério de inclusão);
-2. Determinar lista de proteínas alteradas a serem estudadas;
-3. Filtrar em relação ao grau de expressão, separando em aumento ou diminuição da expressão;
-4. Construir e analisar as redes de interação proteína-proteína para cada doença;
+1. Seleção dos artigos relevantes com foco em estudos pré-clínico em placenta com análises proteômicas (critério de inclusão);
+2. Fazer uma curadoria dos dados da proteômica, selecionando as proteínas alteradas a serem estudadas;
+3. Filtrar proteínas em relação ao grau de expressão e separá-las pelas que apresentam maior ou menor expressão;
+4. Construir e analisar as redes de interação proteína-proteína para cada doença. em seguida, integrar as redes de ambas doenças e analisar as proteínas em comum;
 * Utilizar técnicas exploratórias de ciência de redes, tais como: análise de centralidade para identificar proteínas mais relevantes que são afetadas pelas doenças; identificação de comunidades de proteínas que podem se repetir entre as diferentes doenças.
-6. Analisar as vias biológicas afetadas.
+5. Aplicar métodos de análise de enriquecimento de vias para contruir uma rede de associação entre vias biológicas e as proteínas alteradas. Utilizar a rede resultante para identificar os principais mecanismos biológicos associados às duas doenças.
 
 ## Bases de Dados e Evolução
 > Base de Dados | Endereço na Web | Resumo descritivo
@@ -52,6 +53,11 @@ O projeto pretende explorar o problema seguindo a seguinte metodologia:
 ## Análise Preliminar
 
 ## Evolução do Projeto
+Inicialmente, o projeto tinha como proposta analisar os padrões proteômicos na placenta de ratas, relacionados a três patologias: Diabetes, Câncer e Pré-eclâmpsia. Contudo, durante a revisão da literatura, não foram encontrados resultados relevantes para a diabetes. Diante disso, decidimos prosseguir com o estudo focado nas outras duas doenças.
+Além disso, após o feedback da primeira entrega, foram realizadas modificações no modelo lógico. Durante o desenvolvimento, aumentamos a compreensão do projeto e modificamos o modelo lógico para de fato refletir as redes de interação entre proteínas, os atributos que iriam caracterizar cada nó, e a interação dessas proteínas com vias biológicas associadas.
+Durante esse primeiro mês de elaboração do projeto foi realizado o levantamento bibliográfico, nas bases de dados PubMed e Scorpus. Os dados adquiridos foram tabulados no Excel. Com auxílio do Python, realizou-se a curadoria dos dados e sua inserção no STRING para a elaboração de redes de interação proteína-proteína. A rede gerada utilizava os nomes de proteína (uniprot), porém os nós recebiam a denominação do gene.
+Os resultados dessa rede de interação foram inseridos no Cytoscape, após o processamento dos dados no Neo4j e Python. No Cytoscape os títulos dos nós foram alterados para os nomes de proteína. Além disso, foram analisadas as redes associadas para facilitar a verificação de proteínas em comum das duas redes.
+Os próximos passos serão analisar os atributos dos nós (regulação up ou down, fold change) das redes e analisar a topologia de rede (centralidade e comunidade) no Cytoscape. Além disso, será realizado o enriquecimento da rede buscando por vias biológicas relacionadas, utilizando o Reactome. Com esses resultados será possível relacioná-los e por fim realizar a interpretação biológica dos achados.
 
 ## Ferramentas
 * PubMed, Scopus --> Busca de artigos
