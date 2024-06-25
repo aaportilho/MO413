@@ -9,7 +9,7 @@ O projeto visa analisar comparativamente as alterações proteômicas e funciona
 Para o desenvolvimento deste projeto serão utilizadas diferentes ferramentas, tais como PubMed e Scorpus para procurar artigos relacionados com o tema; Cytoscape e Sting para a construção das redes de interação proteína-proteína; Reactome para analisar as vias biológicas alteradas. Por meio dessa análise, será possível verificar que câncer e pré-eclâmpsia podem gerar modulações a nível proteico e funcional semelhantes na placenta.
 
 ## Slides
-[Apresentação Projeto P2](assets/slides/apresentacao_projeto_p2.pdf)
+[Apresentação Projeto P3](assets/slides/apresentacao_projeto_p3.pdf)
 
 ## Fundamentação Teórica
 Os artigos que serão tomados como base para a fundamentação teórica do problema em saúde/biologia:
