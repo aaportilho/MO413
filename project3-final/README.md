@@ -41,8 +41,8 @@ O projeto pretende explorar o problema seguindo a seguinte metodologia:
 4. Construção e análise das redes de interação proteína-proteína para cada doença;
 5. Integração das redes de ambas doenças e análise das proteínas em comum;
 * Utilizar técnicas exploratórias de ciência de redes, tais como: análise de centralidade para identificar proteínas mais relevantes que são afetadas pelas doenças e se elas se mantêm centrais em ambas as redes; 
-5. Aplicação de métodos de análise de enriquecimento com vias biológicas, construindo a rede heterogênea de associação entre as vias e as proteínas alteradas. 
-6. Integração das redes enriquecidas de cada doença de forma a gerar uma rede com as vias biológicas em comum.
+6. Aplicação de métodos de análise de enriquecimento com vias biológicas, construindo a rede heterogênea de associação entre as vias e as proteínas alteradas. 
+7. Integração das redes enriquecidas de cada doença de forma a gerar uma rede com as vias biológicas em comum.
 * Utilização da rede resultante para identificar os principais mecanismos biológicos associados às duas doenças. Identificação de comunidades que podem ser similares entre as diferentes doenças.
 
 
@@ -101,7 +101,7 @@ O STRING é um banco de dados biológicos que auxilia na elaboração de redes d
 No Cytoscape é possível fazer o enriquecimento dos grafos separadamente e associados.
 Após a identificação das proteínas que exercem maior influência na placenta no câncer e/ou na pré-eclâmpsia, foi utilizado o Kegg. Este é um banco de dados biológicos que permite visualizar as vias biológicas alteradas a partir de genes ou proteínas.
 
-In summary:
+Em resumo:
 * PubMed, Scopus --> Revisão bibliográfica e busca por proteínas alteradas
 * STRING (string-db) --> Database para redes do tipo Protein-protein Interaction (PPI)
 * KEGG --> Database de vias biológicas
