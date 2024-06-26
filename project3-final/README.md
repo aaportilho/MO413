@@ -14,12 +14,14 @@ Para alcançar esse objetivo, serão utilizadas diversas ferramentas, como PubMe
 
 ## Fundamentação Teórica
 Os artigos que serão tomados como base para a fundamentação teórica do problema em saúde/biologia:
-* Placental structural abnormalities in gestational diabetes and when they develop: A scoping review[^1]
-* Fetoplacental oxygen homeostasis in pregnancies with maternal diabetes mellitus and obesity[^2]
-* Pre-eclampsia[^3]
-* Proteomic Approaches in the Study of Placenta of Pregnancy Complicated by Gestational Diabetes Mellitus[^4]
-* Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta[^5]
-* Management of pregnancy in women with cancer[^6]
+* Pre-eclampsia[^6]:
+    * Utilizado para fundamentação teórica da descrição da pré-eclâmpsia.
+* Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia[^9]:
+    * Utilizado os dados proteômicos para realização das análises
+* Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta [^5]
+    * Utilizado para a fundamentação teórica da descrição de alterações do câncer durante a gestação
+* Management of pregnancy in women with cancer International Journal of Gynecologic Cancer[^12]:
+    * Foi utilizado para a fundamentação teórica da descrição de alterações do câncer durante a gestação.
 
 O foco da pesquisa nesses artigos é investigar as alterações em padrões proteômicos e funcionais de placenta de indivíduos com câncer e pré-eclâmpsia.
 
@@ -89,7 +91,7 @@ Durante o primeiro mês de elaboração do projeto foi realizado o levantamento 
 
 Os resultados dessa rede de interação foram inseridos no Cytoscape, após o processamento dos dados em Python e integração das redes e dos atributos dos nós no Neo4j. No Cytoscape os títulos dos nós iam ser alterados para os nomes de proteína, porém após um levantamento de artigos, foi certificado que utilizar o nome do gene era o mais usual. Além disso, foram analisadas as redes associadas para facilitar a verificação de proteínas/genes em comum das duas redes.
 
-Após isso, foram analisados os atributos dos nós (regulação up ou down, fold change) das redes e analisar a topologia de rede (centralidade e comunidade) no Cytoscape. Além disso, foi realizado o enriquecimento da rede buscando por vias biológicas relacionadas, utilizando o Kegg. Com esses resultados foi possível identificar os padrões mais relevantes e, por fim, realizar a interpretação biológica dos achados e a discussão com a literatura.
+Após isso, foram analisados os atributos dos nós (regulação up ou down, fold change) das redes e a topologia de rede (centralidade e comunidade) no Cytoscape. Além disso, foi realizado o enriquecimento da rede buscando por vias biológicas relacionadas, utilizando o Kegg. Com esses resultados foi possível identificar os padrões mais relevantes e, por fim, realizar a interpretação biológica dos achados e a discussão com a literatura.
 
 
 ## Ferramentas
@@ -97,43 +99,52 @@ Para o levantamento bibliográfico e definição das proteínas reguladas nas do
 Os dados adquiridos foram tabulados no Excel. Com auxílio do Python, realizou-se a curadoria dos dados e sua inserção no STRING (string-db). 
 O STRING é um banco de dados biológicos que auxilia na elaboração de redes de interação proteína-proteína. Essas redes de interações entre proteínas foram processadas utilizando Python e Neo4j para integração e criação dos atributos dos nós (Neo4J é um sistema de gerenciamento de banco de dados gráfico).Posteriormente, as redes foram inseridas no Cytoscape para análises específicas.
 No Cytoscape é possível fazer o enriquecimento dos grafos separadamente e associados.
-Após a identificação das proteínas que exercem maior influência na placenta no câncer e/ou na pré-eclâmpsia, será utilizado o Reactome. Este é um banco de dados biológicos que permite visualizar as vias biológicas alteradas a partir de genes ou proteínas.
+Após a identificação das proteínas que exercem maior influência na placenta no câncer e/ou na pré-eclâmpsia, foi utilizado o Kegg. Este é um banco de dados biológicos que permite visualizar as vias biológicas alteradas a partir de genes ou proteínas.
 
-TL;DR:
+In summary:
 * PubMed, Scopus --> Revisão bibliográfica e busca por proteínas alteradas
 * STRING (string-db) --> Database para redes do tipo Protein-protein Interaction (PPI)
-* Reactome --> Database de vias biológicas
+* KEGG --> Database de vias biológicas
 * Python, NEO4J, Cytoscape --> Construção, integração e análise das redes PPI
 
 ## Resultados/Discussão
+A partir dos dados e grafos gerados para cada doença com a regulação (up ou down), foi certificado que a pré-eclâmpsia modula 306 proteínas na placenta, sendo 202 mais expressas e 104 reprimidas. Já no câncer foram  moduladas 177 proteínas no tecido placentário, sendo 40 mais expressas e 137 reprimidas. Dessa forma, pode-se aferir que a pré-eclâmpsia altera mais proteínas do que o câncer. Porém, na pré-eclâmpsia tem mais proteínas reguladas positivamente, enquanto no câncer mostra o contrário.
+Dessas 306 e 177 proteínas moduladas, foi avaliado por grafo e diagrama de Venn (Figura 1), que 22 proteínas estariam alteradas nas duas condições (pré-eclâmpsia e câncer). 
+
+Sendo que das 22 proteínas em comum, 13 estavam reguladas de maneira parecida, como mostra o gráfico (Figura 2) dos genes em comum com o Fold Change.
+
+Após a análise da expressão das proteínas de maneira separada e conjunta, foi realizado o estudo de vias biológicas. Foi realizado um gráfico para cada doença (pré-eclâmpsia e câncer). No gráfico foi avaliado as principais vias alteradas em cada doença e quantas proteínas (do total) que foi alterado estão em cada via. Portanto, como mostra o gráfico do câncer (Figura 3), as proteínas moduladas estavam afetando 16 vias diferentes, com uma quantidade de proteínas moduladas por via parecida. Já a pré-eclâmpsia (Figura 4), por mais que tenha alterado um maior número de proteínas, afetou 12 vias. Entretanto, dentre essas 12 vias alteradas contém 2 com um maior número de proteínas moduladas (metabolismo e processamento de proteínas no retículo endoplasmático), podendo aferir que essas vias estão sendo mais afetadas.
+
+Além disso, foi efetuado a análise de regulação (up e down) das proteínas dessas principais vias, demonstrando que as principais vias na pré-eclâmpsia, contém um maior número de proteínas sendo mais expressas. No câncer, observou-se o contrário, as proteínas das principais vias estavam sendo menos expressas. Com isso, pode-se inferir que o câncer estaria regulando as vias de maneira mais supressora do que na pré-eclâmpsia.
+Por último foram avaliadas as 6 vias em comum nas duas doenças. Sendo que essas vias formavam 5 comunidades. Dessas comunidades, observou-se que possivelmente o metabolismo estaria sendo afetado de maneira parecida.
+O metabolismo da placenta em sua maioria é oxidativo, gerando mais energia. Para isso, quando a glicose é captada pelo GLUT da placenta, ocorre a glicólise com geração do piruvato, produto final da glicólise, que vira Acetil-Coa para iniciar o metabolismo oxidativo. Porém o piruvato também vira Lactato, mas em menor quantidade (Rabinowitz, 2020).
+Na pré-eclâmpsia os genes relacionados com a glicólise (PGM1 e HK) estão regulados positivamente, já no câncer os genes relacionados com o metabolismo oxidativo (SDHA e CS) estão reprimidos. Dessa forma, pode-se inferir que o está ocorrendo uma maior glicólise com geração de lactato na pré-eclâmpsia. Na placenta relacionada com o câncer está sendo prejudicado o metabolismo oxidativo, porém como a placenta precisa de energia, a via principal para obtenção de ATP é do piruvato sendo transformado em lactato. Portanto, nas duas doenças está sendo prejudicado o metabolismo do tecido placentário, podendo prejudicar o desenvolvimento fetal. 
+Já na comunidade do processamento de proteínas no retículo endoplasmático (RE), houve indícios similares de estresse de retículo endoplasmático. Essa via é importante pois atua como fábrica de síntese protéica, contribui para o armazenamento e regulação do cálcio, para a síntese e armazenamento de lipídios e para o metabolismo da glicose (Alberts, 2002; Aye et al., 2022). Na pré-eclâmpsia, o gene HSPa5 está superexpresso e esse gene é um marcador de estresse do retículo endoplasmático, indicando que com o estresse gerado pela remodelação incorreta da artéria da placenta, pode estar ocorrendo estresse do retículo, assim como da mitocôndria, onde ocorre o metabolismo oxidativo (Almanza et al., 2019).
+Já na placenta relacionada ao câncer, o IR1a está superexpresso. Esse gene está relacionado com problemas no desenvolvimento placentário (Iwawaki, 2009; Almanza et al., 2019). Em ambas condições o gene DNAJB11 está presente. Este gene tem função protetiva contra o estresse do retículo endoplasmático, portanto ele estar aumentado de maneira significativa na pré-eclâmpsia corrobora com o resultado do gene Hspa5 (marcador de estresse no retículo) está superexpresso. Já no câncer o gene DNAJB11 está reprimido, indicando que podem estar ocorrendo maiores consequências do estresse de retículo, como aumento de apoptose, uma vez que não está ocorrendo a proteção contra o estresse (Sun et al., 2021).
+Desses resultados, pode-se concluir que os achados estavam dentro do esperado, uma vez que teve modulações em vias e proteínas parecidas. A partir desse resultado pode-se inferir apenas que tem modulações em comum, porém o tipo de modulação e como está afetando a via como um todo, é preciso realizar mais estudos específicos para cada via de interesse.
 
 ## Conclusão
+A partir dos resultados deste estudo, conclui-se que gestações afetadas por câncer ou pré-eclâmpsia compartilham modulações em 6 vias e 22 proteínas no tecido placentário. As principais vias relacionadas a ambas as doenças são o metabolismo e o processamento de proteínas no retículo endoplasmático.
+
+Este projeto se baseia em descobertas da proteômica que fornecem insights importantes sobre as modulações proteicas e vias biológicas envolvidas. No entanto, serão necessários estudos mais específicos para cada via de interesse, visando potencialmente desenvolver pesquisas que possam mitigar as patologias placentárias e, consequentemente, melhorar o desenvolvimento do feto.
+
+Para alcançar esses resultados, foi crucial a colaboração entre as áreas biológica e computacional. Um dos principais desafios enfrentados neste projeto foi a necessidade de comunicação entre profissionais dessas áreas, além da aprendizagem de novos métodos e conceitos além do campo de atuação de cada um.
 
 ## Trabalhos Futuros
+Este projeto fundamenta-se em resultados de proteômica, que representam análises abrangentes. Portanto, com base nos resultados obtidos, é viável conduzir análises futuras das modulações em nível proteico e das vias biológicas, em tecido placentário, semelhantes entre pré-eclâmpsia e câncer. Desta forma, é possível aprofundar o entendimento das alterações genéticas e proteicas de maneira mais específica, visando potencialmente o desenvolvimento de pesquisas para mitigar as patologias placentárias e, consequentemente, influenciar positivamente o desenvolvimento fetal. 
 
 ## Referências Bibliográficas
-[^1]: Alberts B, Johnson A, Lewis J, et al. Molecular Biology of the Cell. 4th edition. New York: Garland Science; 2002. The Endoplasmic Reticulum. Available from: https://www.ncbi.nlm.nih.gov/books/NBK26841/
-
-[^2]: Almanza A, Carlesso A, Chintha C, Creedican S, Doultsinos D, Leuzzi B, Luís A, McCarthy N, Montibeller L, More S, Papaioannou A, Püschel F, Sassano ML, Skoko J, Agostinis P, de Belleroche J, Eriksson LA, Fulda S, Gorman AM, Healy S, Kozlov A, Muñoz-Pinedo C, Rehm M, Chevet E, Samali A. Endoplasmic reticulum stress signalling - from basic mechanisms to clinical applications. FEBS J. 2019 Jan;286(2):241-278. doi: 10.1111/febs.14608. 
-
-[^3]: Aye ILMH, Aiken CE, Charnock-Jones DS, Smith GCS. Placental energy metabolism in health and disease-significance of development and implications for preeclampsia. Am J Obstet Gynecol. 2022 Feb;226(2S):S928-S944. doi: 10.1016/j.ajog.2020.11.005. Epub 2020 Nov 13. 
-
-[^4]: Camargo, E.B., Moraes, L.F.S., Souza, C.M. et al. Survey of calcium supplementation to prevent preeclampsia: the gap between evidence and practice in Brazil. BMC Pregnancy Childbirth 13, 206 (2013). https://doi.org/10.1186/1471-2393-13-206
-
-[^5]: Dai, W., Pollinzi, A.; Piquette-Miller, M. Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia. Drug Metab Dispos 51:1308–1315 (2023). https://dx.doi.org/10.1124/dmd.122.001080.
-
-[^6]: Dimitriadis, E., Rolnik, D.L., Zhou, W. et al. Pre-eclampsia. Nat Rev Dis Primers 9, 8 (2023). https://doi.org/10.1038/s41572-023-00417-6
-
-[^7]: Ferreira da Silva RC, Malhão TA, Rezende LFM, da Silva Barbosa R, Correa Schilithz AO, et al. Current and future costs of cancer attributable to insufficient leisure-time physical activity in Brazil. PLOS ONE 18(10): e0293771. (2023). https://doi.org/10.1371/journal.pone.0287224
-
-[^8]: Iwawaki T, Akai R, Yamanaka S, Kohno K. Function of IRE1 alpha in the placenta is essential for placental development and embryonic viability. Proc Natl Acad Sci U S A. 2009 Sep 29;106(39):16657-62. doi: 10.1073/pnas.0903775106. Epub 2009 Sep 15. PMID: 19805353; PMCID: PMC2757843.
-
-[^9]: Oliveira MdMS, Salgado CdM, Viana LR, Gomes-Marcondes MCC. Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta. Cancers. 2021; 13(7):1667.
-
-[^10]: Rabinowitz JD, Enerbäck S. Lactate: the ugly duckling of energy metabolism. Nat Metab. 2020 Jul;2(7):566-571. doi: 10.1038/s42255-020-0243-4. Epub 2020 Jul 20. PMID: 32694798; PMCID: PMC7983055.
-
-[^11]: Sun R, Yang L, Wang Y, Zhang Y, Ke J, Zhao D. DNAJB11 predicts a poor prognosis and is associated with immune infiltration in thyroid carcinoma: a bioinformatics analysis. J Int Med Res. 2021 Nov;49(11):3000605211053722. doi: 10.1177/03000605211053722. 
-
-[^12]: Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancer International Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
+* [^1]: Alberts B, Johnson A, Lewis J, et al. Molecular Biology of the Cell. 4th edition. New York: Garland Science; 2002. The Endoplasmic Reticulum. Available from: https://www.ncbi.nlm.nih.gov/books/NBK26841/
+* [^2]: Almanza A, Carlesso A, Chintha C, Creedican S, Doultsinos D, Leuzzi B, Luís A, McCarthy N, Montibeller L, More S, Papaioannou A, Püschel F, Sassano ML, Skoko J, Agostinis P, de Belleroche J, Eriksson LA, Fulda S, Gorman AM, Healy S, Kozlov A, Muñoz-Pinedo C, Rehm M, Chevet E, Samali A. Endoplasmic reticulum stress signalling - from basic mechanisms to clinical applications. FEBS J. 2019 Jan;286(2):241-278. doi: 10.1111/febs.14608. 
+* [^3]: Aye ILMH, Aiken CE, Charnock-Jones DS, Smith GCS. Placental energy metabolism in health and disease-significance of development and implications for preeclampsia. Am J Obstet Gynecol. 2022 Feb;226(2S):S928-S944. doi: 10.1016/j.ajog.2020.11.005. Epub 2020 Nov 13.
+* [^4]: Camargo, E.B., Moraes, L.F.S., Souza, C.M. et al. Survey of calcium supplementation to prevent preeclampsia: the gap between evidence and practice in Brazil. BMC Pregnancy Childbirth 13, 206 (2013). https://doi.org/10.1186/1471-2393-13-206
+* [^5]: Dai, W., Pollinzi, A.; Piquette-Miller, M. Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia. Drug Metab Dispos 51:1308–1315 (2023). https://dx.doi.org/10.1124/dmd.122.001080.
+* [^6]: Dimitriadis, E., Rolnik, D.L., Zhou, W. et al. Pre-eclampsia. Nat Rev Dis Primers 9, 8 (2023). https://doi.org/10.1038/s41572-023-00417-6
+* [^7]: Ferreira da Silva RC, Malhão TA, Rezende LFM, da Silva Barbosa R, Correa Schilithz AO, et al. Current and future costs of cancer attributable to insufficient leisure-time physical activity in Brazil. PLOS ONE 18(10): e0293771. (2023). https://doi.org/10.1371/journal.pone.0287224
+* [^8]: Iwawaki T, Akai R, Yamanaka S, Kohno K. Function of IRE1 alpha in the placenta is essential for placental development and embryonic viability. Proc Natl Acad Sci U S A. 2009 Sep 29;106(39):16657-62. doi: 10.1073/pnas.0903775106. Epub 2009 Sep 15. PMID: 19805353; PMCID: PMC2757843.
+* [^9]: Oliveira MdMS, Salgado CdM, Viana LR, Gomes-Marcondes MCC. Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta. Cancers. 2021; 13(7):1667.
+* [^10]: Rabinowitz JD, Enerbäck S. Lactate: the ugly duckling of energy metabolism. Nat Metab. 2020 Jul;2(7):566-571. doi: 10.1038/s42255-020-0243-4. Epub 2020 Jul 20. PMID: 32694798; PMCID: PMC7983055.
+* [^11]: Sun R, Yang L, Wang Y, Zhang Y, Ke J, Zhao D. DNAJB11 predicts a poor prognosis and is associated with immune infiltration in thyroid carcinoma: a bioinformatics analysis. J Int Med Res. 2021 Nov;49(11):3000605211053722. doi: 10.1177/03000605211053722.
+* [^12]: Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancer International Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
 
 
