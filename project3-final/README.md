@@ -13,14 +13,14 @@ Para alcançar esse objetivo, serão utilizadas diversas ferramentas, como PubMe
 [Apresentação Projeto P3](assets/slides/apresentacao_projeto_p3.pdf)
 
 ## Fundamentação Teórica
-Os artigos que serão tomados como base para a fundamentação teórica do problema em saúde/biologia:
-* Pre-eclampsia[^6]:
+Os principais artigos que serão tomados como base para a fundamentação teórica do problema em saúde/biologia:
+* Pre-eclampsia[6]:
     * Utilizado para fundamentação teórica da descrição da pré-eclâmpsia.
-* Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia[^9]:
+* Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia[9]:
     * Utilizado os dados proteômicos para realização das análises
-* Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta [^5]
+* Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta[5]
     * Utilizado para a fundamentação teórica da descrição de alterações do câncer durante a gestação
-* Management of pregnancy in women with cancer International Journal of Gynecologic Cancer[^12]:
+* Management of pregnancy in women with cancer International Journal of Gynecologic Cancer[12]:
     * Foi utilizado para a fundamentação teórica da descrição de alterações do câncer durante a gestação.
 
 O foco da pesquisa nesses artigos é investigar as alterações em padrões proteômicos e funcionais de placenta de indivíduos com câncer e pré-eclâmpsia.
@@ -148,17 +148,17 @@ Para alcançar esses resultados, foi crucial a colaboração entre as áreas bio
 Este projeto fundamenta-se em resultados de proteômica, que representam análises abrangentes. Portanto, com base nos resultados obtidos, é viável conduzir análises futuras das modulações em nível proteico e das vias biológicas, em tecido placentário, semelhantes entre pré-eclâmpsia e câncer. Desta forma, é possível aprofundar o entendimento das alterações genéticas e proteicas de maneira mais específica, visando potencialmente o desenvolvimento de pesquisas para mitigar as patologias placentárias e, consequentemente, influenciar positivamente o desenvolvimento fetal. 
 
 ## Referências Bibliográficas
-* [^1]: Alberts B, Johnson A, Lewis J, et al. Molecular Biology of the Cell. 4th edition. New York: Garland Science; 2002. The Endoplasmic Reticulum. Available from: https://www.ncbi.nlm.nih.gov/books/NBK26841/
-* [^2]: Almanza A, Carlesso A, Chintha C, Creedican S, Doultsinos D, Leuzzi B, Luís A, McCarthy N, Montibeller L, More S, Papaioannou A, Püschel F, Sassano ML, Skoko J, Agostinis P, de Belleroche J, Eriksson LA, Fulda S, Gorman AM, Healy S, Kozlov A, Muñoz-Pinedo C, Rehm M, Chevet E, Samali A. Endoplasmic reticulum stress signalling - from basic mechanisms to clinical applications. FEBS J. 2019 Jan;286(2):241-278. doi: 10.1111/febs.14608. 
-* [^3]: Aye ILMH, Aiken CE, Charnock-Jones DS, Smith GCS. Placental energy metabolism in health and disease-significance of development and implications for preeclampsia. Am J Obstet Gynecol. 2022 Feb;226(2S):S928-S944. doi: 10.1016/j.ajog.2020.11.005. Epub 2020 Nov 13.
-* [^4]: Camargo, E.B., Moraes, L.F.S., Souza, C.M. et al. Survey of calcium supplementation to prevent preeclampsia: the gap between evidence and practice in Brazil. BMC Pregnancy Childbirth 13, 206 (2013). https://doi.org/10.1186/1471-2393-13-206
-* [^5]: Dai, W., Pollinzi, A.; Piquette-Miller, M. Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia. Drug Metab Dispos 51:1308–1315 (2023). https://dx.doi.org/10.1124/dmd.122.001080.
-* [^6]: Dimitriadis, E., Rolnik, D.L., Zhou, W. et al. Pre-eclampsia. Nat Rev Dis Primers 9, 8 (2023). https://doi.org/10.1038/s41572-023-00417-6
-* [^7]: Ferreira da Silva RC, Malhão TA, Rezende LFM, da Silva Barbosa R, Correa Schilithz AO, et al. Current and future costs of cancer attributable to insufficient leisure-time physical activity in Brazil. PLOS ONE 18(10): e0293771. (2023). https://doi.org/10.1371/journal.pone.0287224
-* [^8]: Iwawaki T, Akai R, Yamanaka S, Kohno K. Function of IRE1 alpha in the placenta is essential for placental development and embryonic viability. Proc Natl Acad Sci U S A. 2009 Sep 29;106(39):16657-62. doi: 10.1073/pnas.0903775106. Epub 2009 Sep 15. PMID: 19805353; PMCID: PMC2757843.
-* [^9]: Oliveira MdMS, Salgado CdM, Viana LR, Gomes-Marcondes MCC. Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta. Cancers. 2021; 13(7):1667.
-* [^10]: Rabinowitz JD, Enerbäck S. Lactate: the ugly duckling of energy metabolism. Nat Metab. 2020 Jul;2(7):566-571. doi: 10.1038/s42255-020-0243-4. Epub 2020 Jul 20. PMID: 32694798; PMCID: PMC7983055.
-* [^11]: Sun R, Yang L, Wang Y, Zhang Y, Ke J, Zhao D. DNAJB11 predicts a poor prognosis and is associated with immune infiltration in thyroid carcinoma: a bioinformatics analysis. J Int Med Res. 2021 Nov;49(11):3000605211053722. doi: 10.1177/03000605211053722.
-* [^12]: Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancer International Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
+1. Alberts B, Johnson A, Lewis J, et al. Molecular Biology of the Cell. 4th edition. New York: Garland Science; 2002. The Endoplasmic Reticulum. Available from: https://www.ncbi.nlm.nih.gov/books/NBK26841/
+2. Almanza A, Carlesso A, Chintha C, Creedican S, Doultsinos D, Leuzzi B, Luís A, McCarthy N, Montibeller L, More S, Papaioannou A, Püschel F, Sassano ML, Skoko J, Agostinis P, de Belleroche J, Eriksson LA, Fulda S, Gorman AM, Healy S, Kozlov A, Muñoz-Pinedo C, Rehm M, Chevet E, Samali A. Endoplasmic reticulum stress signalling - from basic mechanisms to clinical applications. FEBS J. 2019 Jan;286(2):241-278. doi: 10.1111/febs.14608.
+3. Aye ILMH, Aiken CE, Charnock-Jones DS, Smith GCS. Placental energy metabolism in health and disease-significance of development and implications for preeclampsia. Am J Obstet Gynecol. 2022 Feb;226(2S):S928-S944. doi: 10.1016/j.ajog.2020.11.005. Epub 2020 Nov 13.
+4. Camargo, E.B., Moraes, L.F.S., Souza, C.M. et al. Survey of calcium supplementation to prevent preeclampsia: the gap between evidence and practice in Brazil. BMC Pregnancy Childbirth 13, 206 (2013). https://doi.org/10.1186/1471-2393-13-206.
+5. Dai, W., Pollinzi, A.; Piquette-Miller, M. Use of Traditional and Proteomic Methods in the Assessment of a Preclinical Model of Preeclampsia. Drug Metab Dispos 51:1308–1315 (2023). https://dx.doi.org/10.1124/dmd.122.001080.
+6. Dimitriadis, E., Rolnik, D.L., Zhou, W. et al. Pre-eclampsia. Nat Rev Dis Primers 9, 8 (2023). https://doi.org/10.1038/s41572-023-00417-6.
+7. Ferreira da Silva RC, Malhão TA, Rezende LFM, da Silva Barbosa R, Correa Schilithz AO, et al. Current and future costs of cancer attributable to insufficient leisure-time physical activity in Brazil. PLOS ONE 18(10): e0293771. (2023). https://doi.org/10.1371/journal.pone.0287224.
+8. Iwawaki T, Akai R, Yamanaka S, Kohno K. Function of IRE1 alpha in the placenta is essential for placental development and embryonic viability. Proc Natl Acad Sci U S A. 2009 Sep 29;106(39):16657-62. doi: 10.1073/pnas.0903775106. Epub 2009 Sep 15. PMID: 19805353; PMCID: PMC2757843.
+9. Oliveira MdMS, Salgado CdM, Viana LR, Gomes-Marcondes MCC. Pregnancy and Cancer: Cellular Biology and Mechanisms Affecting the Placenta. Cancers. 2021; 13(7):1667.
+10. Rabinowitz JD, Enerbäck S. Lactate: the ugly duckling of energy metabolism. Nat Metab. 2020 Jul;2(7):566-571. doi: 10.1038/s42255-020-0243-4. Epub 2020 Jul 20. PMID: 32694798; PMCID: PMC7983055.
+11. Sun R, Yang L, Wang Y, Zhang Y, Ke J, Zhao D. DNAJB11 predicts a poor prognosis and is associated with immune infiltration in thyroid carcinoma: a bioinformatics analysis. J Int Med Res. 2021 Nov;49(11):3000605211053722. doi: 10.1177/03000605211053722.
+12. Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancer International Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
 
 
