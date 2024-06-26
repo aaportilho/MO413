@@ -111,9 +111,23 @@ In summary:
 A partir dos dados e grafos gerados para cada doença com a regulação (up ou down), foi certificado que a pré-eclâmpsia modula 306 proteínas na placenta, sendo 202 mais expressas e 104 reprimidas. Já no câncer foram  moduladas 177 proteínas no tecido placentário, sendo 40 mais expressas e 137 reprimidas. Dessa forma, pode-se aferir que a pré-eclâmpsia altera mais proteínas do que o câncer. Porém, na pré-eclâmpsia tem mais proteínas reguladas positivamente, enquanto no câncer mostra o contrário.
 Dessas 306 e 177 proteínas moduladas, foi avaliado por grafo e diagrama de Venn (Figura 1), que 22 proteínas estariam alteradas nas duas condições (pré-eclâmpsia e câncer). 
 
+![Venn Diag](assets/images/grafico_venn_diagram.png)
+*Figura 2. Diagrama de Venn ilustrando quantas proteínas tinha em cada doença e quantas eram similares.*
+
 Sendo que das 22 proteínas em comum, 13 estavam reguladas de maneira parecida, como mostra o gráfico (Figura 2) dos genes em comum com o Fold Change.
 
+
+![Fold Change Common](assets/images/grafico_fold_change_common_genes.png)
+*Figura 3. Ilustração dos genes em comum e o tipo de regulação a partir do Fold Change.*
+
 Após a análise da expressão das proteínas de maneira separada e conjunta, foi realizado o estudo de vias biológicas. Foi realizado um gráfico para cada doença (pré-eclâmpsia e câncer). No gráfico foi avaliado as principais vias alteradas em cada doença e quantas proteínas (do total) que foi alterado estão em cada via. Portanto, como mostra o gráfico do câncer (Figura 3), as proteínas moduladas estavam afetando 16 vias diferentes, com uma quantidade de proteínas moduladas por via parecida. Já a pré-eclâmpsia (Figura 4), por mais que tenha alterado um maior número de proteínas, afetou 12 vias. Entretanto, dentre essas 12 vias alteradas contém 2 com um maior número de proteínas moduladas (metabolismo e processamento de proteínas no retículo endoplasmático), podendo aferir que essas vias estão sendo mais afetadas.
+
+![Vias Strength Cancer](assets/images/grafico_vias_strength_cancer.png)
+*Figura 4. Gráfico das vias biológicas mais afetadas na placenta associada ao câncer.*
+
+![Vias Strength Pre-eclampsia](assets/images/grafico_vias_strength_pre_eclampsia.png)
+*Figura 5. Gráfico das vias biológicas mais afetadas na placenta associada à pré-eclâmpsia.*
+
 
 Além disso, foi efetuado a análise de regulação (up e down) das proteínas dessas principais vias, demonstrando que as principais vias na pré-eclâmpsia, contém um maior número de proteínas sendo mais expressas. No câncer, observou-se o contrário, as proteínas das principais vias estavam sendo menos expressas. Com isso, pode-se inferir que o câncer estaria regulando as vias de maneira mais supressora do que na pré-eclâmpsia.
 Por último foram avaliadas as 6 vias em comum nas duas doenças. Sendo que essas vias formavam 5 comunidades. Dessas comunidades, observou-se que possivelmente o metabolismo estaria sendo afetado de maneira parecida.
