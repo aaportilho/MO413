@@ -81,20 +81,20 @@ Em todas as etapas, houveram perdas de algumas proteínas devido a falta de rela
 ## Análises Realizadas
 Esta seção apresenta as principais visualizações das redes construídas e análises que serviram de base para a interpretação e discussão biológica dos resultados (descrita nas seções posteriores).
 
-As redes de interação proteína-proteína podem ser observadas nas Figuras 2 e 3. Para evidenciar a expressão diferencial de cada proteína, o tamanho dos nós é proporcional ao *fold change* observado na doença e a cor dos nós indica se a regulação foi positiva ou negativa (vermelho representa *up* e verde *down*).
+As redes de interação proteína-proteína podem ser observadas nas Figuras 2 e 3. Para evidenciar a expressão diferencial de cada proteína, o tamanho dos nós é proporcional ao *fold change* observado na doença e a cor dos nós indica se a regulação foi positiva ou negativa (vermelho representa *down* e verde *up*).
 
 ![PPI cancer](assets/images/ppi/ppi_cancer_with_fc.png)
-*Figura 2. Rede de interação protéica relacionada ao câncer.*
+*Figura 2. Rede de interação proteína-proteína (PPI) relacionada ao câncer.*
 
 ![PPI pre-eclampsia](assets/images/ppi/ppi_data_pre_eclampsia.png)
-*Figura 3. Rede de interação protéica relacionada ao pré-eclâmpsia.*
+*Figura 3. Rede de interação proteína-proteína (PPI) relacionada à pré-eclâmpsia.*
 
-Integrando as interações proteína-proteína de ambas as doenças, temos como resultado a rede da Figura 4. Nesse caso, as proteínas em comum foram colocadas em evidência e o tamanho do nós dessas proteínas é proporcional à métrica de centralidade *betweenness*.
+Integrando as interações proteína-proteína de ambas as doenças, temos como resultado a rede da Figura 4. Nesse caso, as proteínas em comum foram colocadas em evidência e o tamanho dos nós dessas proteínas é proporcional à métrica de centralidade *betweenness*.
 
 ![PPI pre-eclampsia](assets/images/ppi/ppi_data_merged_genes_shared.png)
-*Figura 4. Rede de interação protéica combinada de ambas as doenças.*
+*Figura 4. Rede de interação proteína-proteína (PPI) combinada de ambas as doenças.*
 
-Para a visualização das redes enriquecidas com as vias biológicas, foram representadas principalmente as Figuras 5 e 6. Em ambas, podemos observar as vias alteradas como os nós maiores em azul, enquanto as proteínas ligadas às vias seguem o padrão descrito anteriormente para indicar a expressão diferencial (*fold change* e tipo de regulação).
+Para a visualização das redes enriquecidas com vias biológicas, foram representadas principalmente as Figuras 5 e 6. Em ambas, podemos observar as vias alteradas como os nós maiores em azul, enquanto as proteínas ligadas às vias seguem o padrão descrito anteriormente para indicar a expressão diferencial (*fold change* e tipo de regulação).
 ![KEGG cancer](assets/images/kegg_pathways/kegg_net_cancer_v2.png)
 *Figura 5. Rede enriquecida com vias biológicas de proteínas relacionadas ao câncer.*
 
@@ -103,7 +103,7 @@ Para a visualização das redes enriquecidas com as vias biológicas, foram repr
 
 Por fim, utilizou-se um algoritmo para detecção de comunidades em redes biológicas (*GLay*) para a rede de vias compartilhadas entre as doenças. Dessa forma, foram detectadas 5 comunidades representadas na Figura 6. As vias presentes em cada comunidade serão discutidas na interepretação biológica das seções abaixo.
 ![KEGG cluster](assets/images/kegg_pathways/kegg_net_compartilhadas_cluster.png)
-*Figura 6. Comunidades identificadas em rede enriquecida com vias biológicas compartilhadas entre ambas doenças.*
+*Figura 6. Comunidades identificadas na rede enriquecida com vias biológicas compartilhadas entre ambas doenças.*
 
 ## Evolução do Projeto
 Inicialmente, o projeto tinha como proposta analisar os padrões proteômicos na placenta de ratas, relacionados a três patologias: Diabetes, Câncer e Pré-eclâmpsia. Contudo, durante a revisão da literatura, não foram encontrados resultados relevantes para a diabetes. Diante disso, decidimos prosseguir com o estudo focado nas outras duas doenças.
