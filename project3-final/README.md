@@ -1,5 +1,5 @@
-# Projeto: Estudo Comparativo das Alterações Proteômicas e Funcionais da Placenta em Diabetes, Câncer e Pré-eclâmpsia
-# Project: Comparative Study of Proteomic and Functional Changes in the Placenta during Diabetes, Cancer and Pre-eclampsia
+# Projeto: Estudo Comparativo das Alterações Proteômicas e Funcionais da Placenta em  Câncer e Pré-eclâmpsia
+# Project: Comparative Study of Proteomic and Functional Changes in the Placenta during Cancer and Pre-eclampsia
 
 ## Descrição Resumida do Projeto
 ## Contexto/Motivação
@@ -54,7 +54,7 @@ O projeto pretende explorar o problema seguindo a seguinte metodologia:
 > Scopus | [Scopus](https://www.scopus.com/home.uri) | Repositório para busca de artigos relacionados ao projeto. Tais artigos podem disponibilizar bases de dados usadas posteriormente no projeto.
 > PubMed | [PubMed](https://pubmed.ncbi.nlm.nih.gov/) | Repositório de literatura biomédica.
 
-Os dados de proteínas alteradas que foram extraídos de artigos do Scopus/PubMed e do projeto do  foram tratados para serem compatíveis com o STRING e gerar as redes de interação. Assim, foi necessário mapear os identificadores de proteínas utilizados pelos artigos (UNIPROT) para os genes referentes, uma vez que o STRING utiliza o nome do gene como identificador dos nós das redes.
+Os dados de proteínas alteradas foram extraídos de artigos do Scopus/PubMed e do projeto “Proteomic Profile of Placenta in Breast Cancer-Bearing Rats” realizado no Laboratório de Nutrição e Câncer pelo Igor Santos. Esses dados foram tratados para serem compatíveis com o STRING e gerar as redes de interação. Assim, foi necessário mapear os identificadores de proteínas utilizados pelos artigos (UNIPROT) para os genes referentes, uma vez que o STRING utiliza o nome do gene como identificador dos nós das redes.
 Além disso, algumas proteínas possuíam vários sinônimos separados por ponto e vírgula, dos quais selecionamos um que fosse reconhecido pelo UNIPROT e STRING. Por fim, foram removidas proteínas não identificadas em nenhuma das bases.
 Em relação às redes com as vias biológicas do Kegg, foi necessário tratar a tabela extraída para uma formatação que representasse as arestas da rede, uma vez que a formatação original indicava as proteínas em um formato de lista referente a cada via.
 
@@ -79,7 +79,25 @@ Em todas as etapas, houveram perdas de algumas proteínas devido a falta de rela
 
 
 ## Análises Realizadas
+Esta seção representa algumas visualizações de redes e análises que serviram de base para a interpretação e discussão biológica dos resultados (descrita nas seções posteriores).
 
+![PPI cancer](assets/images/ppi/ppi_cancer_with_fc.png)
+*Figura 2. Rede de interação protéica relacionada ao câncer.*
+
+![PPI pre-eclampsia](assets/images/ppi/ppi_data_pre_eclampsia.png)
+*Figura 3. Rede de interação protéica relacionada ao pré-eclâmpsia.*
+
+![PPI pre-eclampsia](assets/images/ppi/ppi_data_merged_genes_shared.png)
+*Figura 4. Rede de interação protéica combinada de ambas as doenças.*
+
+![KEGG cancer](assets/images/kegg_pathways/kegg_net_cancer_v2.png)
+*Figura 5. Rede enriquecida com vias biológicas de proteínas relacionadas ao câncer.*
+
+![KEGG pre-eclampsia](assets/images/kegg_pathways/kegg_net_pre_eclampsia_2.png)
+*Figura 5. Rede enriquecida com vias biológicas de proteínas relacionadas à pré-eclâmpsia.*
+
+![KEGG cluster](assets/images/kegg_pathways/kegg_net_compartilhadas_cluster.png)
+*Figura 6. Comunidades identificadas em rede enriquecida com vias biológicas compartilhadas entre ambas doenças.*
 
 ## Evolução do Projeto
 Inicialmente, o projeto tinha como proposta analisar os padrões proteômicos na placenta de ratas, relacionados a três patologias: Diabetes, Câncer e Pré-eclâmpsia. Contudo, durante a revisão da literatura, não foram encontrados resultados relevantes para a diabetes. Diante disso, decidimos prosseguir com o estudo focado nas outras duas doenças.
@@ -109,32 +127,36 @@ Em resumo:
 
 ## Resultados/Discussão
 A partir dos dados e grafos gerados para cada doença com a regulação (up ou down), foi certificado que a pré-eclâmpsia modula 306 proteínas na placenta, sendo 202 mais expressas e 104 reprimidas. Já no câncer foram  moduladas 177 proteínas no tecido placentário, sendo 40 mais expressas e 137 reprimidas. Dessa forma, pode-se aferir que a pré-eclâmpsia altera mais proteínas do que o câncer. Porém, na pré-eclâmpsia tem mais proteínas reguladas positivamente, enquanto no câncer mostra o contrário.
-Dessas 306 e 177 proteínas moduladas, foi avaliado por grafo e diagrama de Venn (Figura 1), que 22 proteínas estariam alteradas nas duas condições (pré-eclâmpsia e câncer). 
+Dessas 306 e 177 proteínas moduladas, foi avaliado por grafo e diagrama de Venn (Figura 7), que 22 proteínas estariam alteradas nas duas condições (pré-eclâmpsia e câncer). 
 
 ![Venn Diag](assets/images/grafico_venn_diagram.png)
-*Figura 2. Diagrama de Venn ilustrando quantas proteínas tinha em cada doença e quantas eram similares.*
+*Figura 7. Diagrama de Venn ilustrando quantas proteínas tinha em cada doença e quantas eram similares.*
 
-Sendo que das 22 proteínas em comum, 13 estavam reguladas de maneira parecida, como mostra o gráfico (Figura 2) dos genes em comum com o Fold Change.
+Sendo que das 22 proteínas em comum, 13 estavam reguladas de maneira parecida, como mostra o gráfico (Figura 8) dos genes em comum com o Fold Change.
 
 
 ![Fold Change Common](assets/images/grafico_fold_change_common_genes.png)
-*Figura 3. Ilustração dos genes em comum e o tipo de regulação a partir do Fold Change.*
+*Figura 8. Ilustração dos genes em comum e o tipo de regulação a partir do Fold Change.*
 
-Após a análise da expressão das proteínas de maneira separada e conjunta, foi realizado o estudo de vias biológicas. Foi realizado um gráfico para cada doença (pré-eclâmpsia e câncer). No gráfico foi avaliado as principais vias alteradas em cada doença e quantas proteínas (do total) que foi alterado estão em cada via. Portanto, como mostra o gráfico do câncer (Figura 3), as proteínas moduladas estavam afetando 16 vias diferentes, com uma quantidade de proteínas moduladas por via parecida. Já a pré-eclâmpsia (Figura 4), por mais que tenha alterado um maior número de proteínas, afetou 12 vias. Entretanto, dentre essas 12 vias alteradas contém 2 com um maior número de proteínas moduladas (metabolismo e processamento de proteínas no retículo endoplasmático), podendo aferir que essas vias estão sendo mais afetadas.
+Após a análise da expressão das proteínas de maneira separada e conjunta, foi realizado o estudo de vias biológicas. Foi realizado um gráfico para cada doença (pré-eclâmpsia e câncer). No gráfico foi avaliado as principais vias alteradas em cada doença e quantas proteínas (do total) que foi alterado estão em cada via. Portanto, como mostra o gráfico do câncer (Figura 9), as proteínas moduladas estavam afetando 16 vias diferentes, com uma quantidade de proteínas moduladas por via parecida. Já a pré-eclâmpsia (Figura 10), por mais que tenha alterado um maior número de proteínas, afetou 12 vias. Entretanto, dentre essas 12 vias alteradas contém 2 com um maior número de proteínas moduladas (metabolismo e processamento de proteínas no retículo endoplasmático), podendo aferir que essas vias estão sendo mais afetadas.
 
 ![Vias Strength Cancer](assets/images/grafico_vias_strength_cancer.png)
-*Figura 4. Gráfico das vias biológicas mais afetadas na placenta associada ao câncer.*
+*Figura 9. Gráfico das vias biológicas mais afetadas na placenta associada ao câncer.*
 
 ![Vias Strength Pre-eclampsia](assets/images/grafico_vias_strength_pre_eclampsia.png)
-*Figura 5. Gráfico das vias biológicas mais afetadas na placenta associada à pré-eclâmpsia.*
+*Figura 10. Gráfico das vias biológicas mais afetadas na placenta associada à pré-eclâmpsia.*
 
 
 Além disso, foi efetuado a análise de regulação (up e down) das proteínas dessas principais vias, demonstrando que as principais vias na pré-eclâmpsia, contém um maior número de proteínas sendo mais expressas. No câncer, observou-se o contrário, as proteínas das principais vias estavam sendo menos expressas. Com isso, pode-se inferir que o câncer estaria regulando as vias de maneira mais supressora do que na pré-eclâmpsia.
-Por último foram avaliadas as 6 vias em comum nas duas doenças. Sendo que essas vias formavam 5 comunidades. Dessas comunidades, observou-se que possivelmente o metabolismo estaria sendo afetado de maneira parecida.
-O metabolismo da placenta em sua maioria é oxidativo, gerando mais energia. Para isso, quando a glicose é captada pelo GLUT da placenta, ocorre a glicólise com geração do piruvato, produto final da glicólise, que vira Acetil-Coa para iniciar o metabolismo oxidativo. Porém o piruvato também vira Lactato, mas em menor quantidade (Rabinowitz, 2020).
+
+Por último foram avaliadas as 6 vias em comum nas duas doenças. Sendo que essas vias formavam 5 comunidades. Dessas comunidades, observou-se que possivelmente o metabolismo estaria sendo afetado de maneira parecida. O metabolismo da placenta em sua maioria é oxidativo, gerando mais energia. Para isso, quando a glicose é captada pelo GLUT da placenta, ocorre a glicólise com geração do piruvato, produto final da glicólise, que vira Acetil-Coa para iniciar o metabolismo oxidativo. Porém o piruvato também vira Lactato, mas em menor quantidade (Rabinowitz, 2020).
+
 Na pré-eclâmpsia os genes relacionados com a glicólise (PGM1 e HK) estão regulados positivamente, já no câncer os genes relacionados com o metabolismo oxidativo (SDHA e CS) estão reprimidos. Dessa forma, pode-se inferir que o está ocorrendo uma maior glicólise com geração de lactato na pré-eclâmpsia. Na placenta relacionada com o câncer está sendo prejudicado o metabolismo oxidativo, porém como a placenta precisa de energia, a via principal para obtenção de ATP é do piruvato sendo transformado em lactato. Portanto, nas duas doenças está sendo prejudicado o metabolismo do tecido placentário, podendo prejudicar o desenvolvimento fetal. 
+
 Já na comunidade do processamento de proteínas no retículo endoplasmático (RE), houve indícios similares de estresse de retículo endoplasmático. Essa via é importante pois atua como fábrica de síntese protéica, contribui para o armazenamento e regulação do cálcio, para a síntese e armazenamento de lipídios e para o metabolismo da glicose (Alberts, 2002; Aye et al., 2022). Na pré-eclâmpsia, o gene HSPa5 está superexpresso e esse gene é um marcador de estresse do retículo endoplasmático, indicando que com o estresse gerado pela remodelação incorreta da artéria da placenta, pode estar ocorrendo estresse do retículo, assim como da mitocôndria, onde ocorre o metabolismo oxidativo (Almanza et al., 2019).
+
 Já na placenta relacionada ao câncer, o IR1a está superexpresso. Esse gene está relacionado com problemas no desenvolvimento placentário (Iwawaki, 2009; Almanza et al., 2019). Em ambas condições o gene DNAJB11 está presente. Este gene tem função protetiva contra o estresse do retículo endoplasmático, portanto ele estar aumentado de maneira significativa na pré-eclâmpsia corrobora com o resultado do gene Hspa5 (marcador de estresse no retículo) está superexpresso. Já no câncer o gene DNAJB11 está reprimido, indicando que podem estar ocorrendo maiores consequências do estresse de retículo, como aumento de apoptose, uma vez que não está ocorrendo a proteção contra o estresse (Sun et al., 2021).
+
 Desses resultados, pode-se concluir que os achados estavam dentro do esperado, uma vez que teve modulações em vias e proteínas parecidas. A partir desse resultado pode-se inferir apenas que tem modulações em comum, porém o tipo de modulação e como está afetando a via como um todo, é preciso realizar mais estudos específicos para cada via de interesse.
 
 ## Conclusão
@@ -160,5 +182,3 @@ Este projeto fundamenta-se em resultados de proteômica, que representam anális
 10. Rabinowitz JD, Enerbäck S. Lactate: the ugly duckling of energy metabolism. Nat Metab. 2020 Jul;2(7):566-571. doi: 10.1038/s42255-020-0243-4. Epub 2020 Jul 20. PMID: 32694798; PMCID: PMC7983055.
 11. Sun R, Yang L, Wang Y, Zhang Y, Ke J, Zhao D. DNAJB11 predicts a poor prognosis and is associated with immune infiltration in thyroid carcinoma: a bioinformatics analysis. J Int Med Res. 2021 Nov;49(11):3000605211053722. doi: 10.1177/03000605211053722.
 12. Wolters V, Heimovaara J, Maggen C, et al Management of pregnancy in women with cancer International Journal of Gynecologic Cancer 2021;31:314-322. https://doi.org/10.1136/ijgc-2020-001776
-
-

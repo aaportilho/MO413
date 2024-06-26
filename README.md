@@ -1,5 +1,5 @@
-# Projeto: Estudo Comparativo das Alterações Proteômicas e Funcionais da Placenta em Diabetes, Câncer e Pré-eclâmpsia
-# Project: Comparative Study of Proteomic and Functional Changes in the Placenta during Diabetes, Cancer and Pre-eclampsia
+# Projeto: Estudo Comparativo das Alterações Proteômicas e Funcionais da Placenta em Câncer e Pré-eclâmpsia
+# Project: Comparative Study of Proteomic and Functional Changes in the Placenta during Cancer and Pre-eclampsia
 
 > |Nome  | RA | Especialização|
 > |--|--|--|
